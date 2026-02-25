@@ -86,4 +86,36 @@ for i in range(1,n+1):
 print("Factorial result of a given number is",res_)
 
 
+# Find the number of prime numbers available for the given number 
+
+
+num_ = int(input("Enter any number : "))
+print("Please find the list of prime numbers till",num_)
+
+#step2
+for x in range(1,num_+1): #num_ = 10
+    #step3
+    if x == 1:
+        print(x,"is neither prime nor composite")
+
+    if x == 2:
+        print("Found a prime number",x)
+    else:
+        cnt_ = 0
+        
+        for y in range(1,x+1): # x = 4 [1,2,3,4]
+            if x % y == 0:
+                cnt_ = cnt_ + 1
+            
+        if cnt_ == 2:
+            print("Found a prime number",x)
+
+# Find the tables upto given number
+
+num_ = int(input("Enter any number : ")) 
+
+for i in range(1,num_+1): 
+    for x in range(1,10+1):
+        print(i,'x',x,'=', x * i)
+    print()
 
