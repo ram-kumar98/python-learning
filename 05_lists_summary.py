@@ -99,6 +99,111 @@ print(lst_.index(1)) # 0
 print(lst_.index(-1)) # Error
 
 
+# APPEND METHOD
+# Append will add the element at the end of the given list.
+
+
+# Add the first 10 even numbers to the empty list.
+
+lst_ = []
+
+for i in range(1,21):
+    if i % 2 == 0:
+        # We need to add the current value to the lst_
+        lst_.append(i)
+
+# append method will add the given element always at the last
+# (4,2 ) (x) -> 2,4 (correct) , [2,4,6]
+print(lst_)
+
+Output : [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+# INSERT() METHOD
+# WILL INSERT DATA OR ELEMENT OR ITEM AT A GIVEN INDEX POSITION
+# SYN : list.insert(index,value)
+
+# IF the given index position is > length of the list then it is going to add the value at the last.
+
+
+lst_ = [1,2,3,4]
+lst_.insert(-4,2.5)
+print(lst_)
+
+
+
+# EXTEND() METHOD
+
+# IF WE want to add elements from one list to another list, we can use the extend method.
+
+lst1 = ['D','E','F']
+lst2 = ['A','B','C']
+
+# ['A','B','C','D','E','F']
+
+lst2.extend(lst1)
+
+print(lst2)
+
+
+
+lst_ = []
+
+lst_.extend("STRING")
+
+print(lst_)
+
+
+# Interview question
+
+lst_ = [[1,2],[3,4],[4,5,6],7,8]
+#Output Expected :  [1,2,3,4,4,5,6]
+output_ = []
+
+for i in lst_:
+    print(i)
+    if isinstance(i, list):
+        output_.extend(i)
+    else:
+        output_.append(i)
+
+print(output_)
+
+
+# Another interview question (bring the odd numbers from below input and add them into out_ list)
+inp_ = [1,2,44,5,6,6,7]
+
+out_ = []
+
+for i in inp_:
+    if i % 2 != 0:
+        out_.append(i)
+
+print(out_)
+
+
+
+# remove() method 
+# syn : list.remove(element)
+
+# NOTE : IF multiple occurences of a element in a list then it is going to remove only the first occurence.
+# If the given element is not available in the list then it is going to raise an Error.
+
+lst = [1,2,3,4,4,5]
+
+lst.remove(4)
+lst.remove(-4)
+
+print(lst)
+
+
+
+
+
+
+
+
+
+
 
 
 
