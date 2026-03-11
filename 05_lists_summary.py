@@ -196,6 +196,236 @@ lst.remove(-4)
 print(lst)
 
 
+# POP() MEthod
+
+# It removes and returns the last element of the list (When we did not mention any index value)
+# It removes and returns the specific element of the list (When we mention any index value)
+# If the index value is not available in the list (Then we will get an Error)
+
+lst_ = [1,2,-2,9,5,8]
+
+print(lst_.pop())
+print(lst_)
+
+print(lst_.pop())
+print(lst_)
+
+print(lst_.pop())
+print(lst_)
+
+Output:
+8
+[1, 2, -2, 9, 5]
+5
+[1, 2, -2, 9]
+9
+[1, 2, -2]
+
+
+
+lst_ = [1,2,-2,9,5,8]
+print(lst_.pop(3))
+print(lst_)
+
+Output: 
+9
+[1, 2, -2, 5, 8]
+
+
+# ORDERING THE ELEMENTS IN A LIST
+
+# REVERSE() and #SORT()
+
+# Reverse()
+# We can use this reverse() method to reverse the order of the elements in a list.
+
+lst_ = ['A','Z','Y','M']
+
+lst_.reverse()
+print(lst_)
+Output:
+['M', 'Y', 'Z', 'A']
+
+# SORT()
+# Sort() method helps us to order the elements based on requirement(either asc or desc)
+# Note : The elements inside the list must be homogenous.
+
+lst_ = ['A','a','z','Z','Y','M']
+lst_2 = [-7,-1,-2,889,98]
+
+lst_.sort()
+lst_2.sort()
+
+print(lst_)
+print(lst_2)
+
+Output:
+['A', 'M', 'Y', 'Z', 'a', 'z']
+[-7, -2, -1, 98, 889]
+
+# Desc order in Sort
+
+lst_ = ['A','a','z','Z','Y','M']
+lst_2 = [-7,-1,-2,889,98]
+
+lst_.sort(reverse=True)
+lst_2.sort(reverse=True)
+
+print(lst_)
+print(lst_2)
+
+
+Output:
+['z', 'a', 'Z', 'Y', 'M', 'A']
+[889, 98, -1, -2, -7]
+
+
+# COPY METHOD 
+-------------------------
+# Copy method will helps us to copy the elements of the given input list and assign the values to the target list.
+# In the below example, input list is lst1 and target list is lst2.
+# The lst2 will be created in seperate memory and hence we dont get any issues when lst1 is subjected to any changes.
+
+lst1 = [1,2,3]
+
+lst2 = lst1.copy()
+
+print(lst1)
+print(lst2)
+
+lst1.append(4)
+
+print(id(lst1))
+print(id(lst2))
+
+print(lst1)
+print(lst2)
+
+
+# LIST CONCATENATION 
+
+lst1 = [1,2,3]
+lst2 = [4,5,6,[7,8]]
+
+print(lst1+lst2)
+Output:
+
+[1, 2, 3, 4, 5, 6, [7, 8]]
+
+
+# LIST MULTIPLICATION
+
+
+lst1 = [1,2,3]
+print(lst1*3)
+
+output:
+[1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+# LIST COMPARISION
+
+lst1 = ['A','B']
+lst2 = ['a','B']
+
+if lst1 == lst2:
+    print("Yes ")
+else:
+    print("No")
+
+
+output: No
+
+
+# MEMBERSHIP OPERATIONS ON LIST
+
+lst1 = ['A','B']
+
+
+if 'a' not in lst1:
+    print("Yes")
+else:
+    print("No")
+
+
+# MAnual logic
+
+lst1 = ['A','B']
+is_val_available = False
+
+for i in lst1:
+    if i == 'A':
+        is_val_available = True
+        break 
+
+
+if is_val_available:
+    print("yes")
+else:
+    print("no")
+
+
+
+# CLEAR FUNCTION
+# It will make your list empty.
+
+lst = [1,2,3,4]
+print(lst)
+lst.clear()
+print(lst)
+
+
+output:
+[1, 2, 3, 4]
+[]
+
+
+# LIST COMPREHENSION
+
+
+# multi line code
+
+lst1 = [1,2,3,4]
+
+lst2 = list()
+# lst2 = [1,4,9,16]
+
+for i in lst1:
+    a = i ** 2
+    lst2.append(a)
+
+print(lst2)
+
+
+# single line code 
+
+lst1 = [1,2,3,4]
+
+lst2 = [i+10 for i in lst1  if i % 2 == 0 ]
+
+lst3 = [i+10 if i %2 == 0 else i+11 for i in lst1]
+
+print(lst2)
+
+print(lst3)
+
+Output:
+[12, 14]
+[12, 12, 14, 14]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
