@@ -415,7 +415,29 @@ Output:
 
 
 
+# LIST UNPACKING
+# NOTE : No of variables should be equals to no of elements in a list, if it is unequal then we will get Error.
 
+lst_ = [1,2,[3,4]]
+a,b,c = lst_ 
+print(a,b,c)
+
+
+
+# SOME COMMON FUNCTIONS
+
+# Get the minimum value element from the list
+lst_ = [-1,-2,3,5,89]
+
+for i in lst_:
+    if i < min_:
+        min_ = i 
+
+print(min_)
+
+#  min(list) -> Gives you the minimum value.
+# print(max(lst_))  Gives you the maximum value.
+# print(sum(lst_))  Gives you the sum of elements in a list.
 
 
 
