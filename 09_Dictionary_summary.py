@@ -167,7 +167,6 @@ op: 2
 
 
 
-
 # pop() method
 
 dat_ = [(1,'Ram'),(2,'Ravi')]
@@ -189,6 +188,126 @@ dic = dict(dat_)
 print(dic.popitem())
 
 print(dic)
+
+
+# keys() method
+
+d_ = {}
+
+d_[1] = 'Ravi'
+d_[2] = 'Nagesh'
+d_[3] = 'Geetha'
+
+
+for i in d_.keys():
+    print(i)
+
+
+op:
+
+1
+2
+3
+
+
+
+# values() method
+d_ = {}
+
+d_[1] = 'Ravi'
+d_[2] = 'Nagesh'
+d_[3] = 'Geetha'
+
+print(tuple(d_.values()))
+
+for i in d_.values():
+    print(i)
+
+op:
+
+('Ravi', 'Nagesh', 'Geetha')
+Ravi
+Nagesh
+Geetha
+
+
+
+
+# items() method 
+
+d_ = {}
+
+d_['ravi'] = 95
+d_['Selwanth'] = 98
+d_['Nagesh'] = 99
+d_['Kesava'] = 100
+
+
+print(d_.items())
+
+for k,v in d_.items():
+    if v > 95:
+        print("Found eligible student ->",k)
+
+
+op:
+dict_items([('ravi', 95), ('Selwanth', 98), ('Nagesh', 99), ('Kesava', 100)])
+Found eligible student -> Selwanth
+Found eligible student -> Nagesh
+Found eligible student -> Kesava
+
+
+# update() method will allows you to insert the dict elements from one dict to another dict.
+
+
+d1_ = {1:'a',2:'b'}
+d2_ = {2:'c',4:'d'}
+
+# for k,v in d2_.items():
+#     d1_[k] = v 
+
+d1_.update(d2_)
+
+print(d1_)
+
+op:
+
+{1: 'a', 2: 'c', 4: 'd'}
+
+
+# Get the count of each character and print
+
+sent_ = input("Enter any data ")
+
+op_ = {}
+
+for c in sent_:
+    op_[c] = op_.get(c,0)+1
+
+for k,v in op_.items():
+    print(f"Letter {k} and count is {v}")
+
+
+
+
+# Dict Comprehension
+d_ = {1:1000,2:500,3:700}
+
+d2_ = {k: int(v+v*0.1) for k,v in d_.items()}
+
+print(d2_)
+
+op:
+
+{1: 1100, 2: 550, 3: 770}
+
+
+
+
+
+
+
+
 
 
 
