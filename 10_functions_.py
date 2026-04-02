@@ -247,7 +247,29 @@ lst_ = [1,3,4,5,6,8]
 print(list(filter(lambda x: x % 2 == 0 ,lst_)))
 
 
+# Function aliasing
 
+def f1():
+    print("This is function 1")
+
+f2 = f1
+
+f1()
+f2()
+
+
+# Function can return another function
+
+def outer():
+    print("This is outer function")
+
+    def inner():
+        print("This is inner function")
+
+    return inner
+
+f = outer() 
+f()
 
 
 
